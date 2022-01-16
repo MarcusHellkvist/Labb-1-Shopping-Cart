@@ -4,6 +4,7 @@ namespace Labb_1_Marcus_Hellkvist.Models
 {
     public class DiscountCheapestItem : IDiscount
     {
+
         public int calculateDiscount(Dictionary<Item, int> cart)
         {
             int totalDiscount = 0;

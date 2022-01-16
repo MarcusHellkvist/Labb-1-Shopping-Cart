@@ -10,12 +10,12 @@ namespace Labb_1_Marcus_Hellkvist.Models
     public class Cart
     {
         public Dictionary<Item, int> Items = new Dictionary<Item, int>();
-        public int TotalDiscount { get; set; }
+        public List<int> Discounts { get; set; } = new List<int>();
 
-        public void CalculateDiscount(IDiscount discountMethod) 
+        public void CalculateDiscount(IDiscount discountMethod)
         {
             var discount = discountMethod.calculateDiscount(Items);
-            TotalDiscount += discount;
+            Discounts.Add(discount);
         }
 
         public void AddItem(Item item) 
@@ -42,28 +42,12 @@ namespace Labb_1_Marcus_Hellkvist.Models
             }
         }
 
-        public void ShowCart()
+        public int GetTotalPriceWithDiscount()
         {
-            Console.WriteLine("-------------[C A R T]-------------");
-            foreach (var item in Items)
-            {
-                Console.WriteLine(item.Value + " x " + item.Key.Name + "        $" + (item.Key.Price * item.Value) + " (á " + (item.Key.Price) + ")");
-               
-            }
-            Console.WriteLine();
-            Console.WriteLine("-------------[C H E C K O U T]-------------");
-            Console.WriteLine("Total Price: $" + TotalPrice());
-            Console.WriteLine("Discount: -$" + TotalDiscount);
-            Console.WriteLine("You Pay: $" + TotalPriceWithDiscount());
-            Console.WriteLine("-------------------------------------");
+            return GetTotalPrice() - GetTotalDiscount();
         }
 
-        public int TotalPriceWithDiscount()
-        {
-            return TotalPrice() - TotalDiscount;
-        }
-
-        public int TotalPrice()
+        public int GetTotalPrice()
         {
             var totalPrice = 0;
 
@@ -72,6 +56,16 @@ namespace Labb_1_Marcus_Hellkvist.Models
                 totalPrice += (item.Key.Price * item.Value);
             }
             return totalPrice;
+        }
+
+        public int GetTotalDiscount() 
+        {
+            int discount = 0;
+            foreach (var d in Discounts)
+            {
+                discount += d;
+            }
+            return discount;
         }
     }
 }

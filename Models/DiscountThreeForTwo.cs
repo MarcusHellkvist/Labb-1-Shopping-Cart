@@ -4,12 +4,16 @@ namespace Labb_1_Marcus_Hellkvist.Models
 {
     public class DiscountThreeForTwo : IDiscount
     {
+
         public int calculateDiscount(Dictionary<Item, int> cart)
         {
             int totalDiscount = 0;
             foreach (var item in cart)
             {
-                if (item.Value == 3)
+                double times = (item.Value / 3);
+                Console.WriteLine(times);
+
+                for (int i = 0; i < times; i++)
                 {
                     totalDiscount += item.Key.Price;
                 }
