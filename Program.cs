@@ -22,6 +22,7 @@ var discountCheapestItem = new DiscountCheapestItem();
 // credit card
 var masterCard = new MasterCard(400);
 
+// observer
 var UIController = new UIController();
 
 cart.Attach(UIController);
