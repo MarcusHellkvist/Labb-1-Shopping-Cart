@@ -9,14 +9,23 @@ namespace Labb_1_Marcus_Hellkvist.Models
 {
     public class UIController : IObserver
     {
-        public void Update(ISubject subject)
+        public void Update(ISubject subject, int flag)
         {
-            var s = subject as Cart;
-            if (s != null)
+            Cart? cart = subject as Cart;
+            if (cart != null)
             {
-                Console.WriteLine(s.Items.LastOrDefault().Key.Name + " added to the shopping cart");
+                switch (flag)
+                {
+                    case 0:
+                        Console.WriteLine(cart.Items.LastOrDefault().Key.Name + " added to the shopping cart");
+                        break;
+                    case 1:
+                        Console.WriteLine("Item removed");
+                        break;
+                    default:
+                        break;
+                }
             }
-            
         }
     }
 }

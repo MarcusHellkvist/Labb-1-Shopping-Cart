@@ -40,6 +40,8 @@ cart.AddItem(soda);
 cart.AddItem(soda);
 cart.AddItem(water);
 
+cart.RemoveItem(milk);
+
 cart.CalculateDiscount(discountThreeForTwo);
 cart.CalculateDiscount(discountCheapestItem);
 cart.CalculateDiscount(discountTenPercent);

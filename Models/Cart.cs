@@ -9,9 +9,9 @@ namespace Labb_1_Marcus_Hellkvist.Models
 {
     public class Cart : ISubject
     {
-        public Dictionary<Item, int> Items = new Dictionary<Item, int>();
-        public List<int> Discounts { get; set; } = new List<int>();
-        private readonly List<IObserver> _observers = new List<IObserver>();
+        public Dictionary<Item, int> Items = new();
+        public List<int> Discounts { get; set; } = new();
+        private readonly List<IObserver> _observers = new();
 
         public void CalculateDiscount(IDiscount discountMethod)
         {
@@ -29,7 +29,7 @@ namespace Labb_1_Marcus_Hellkvist.Models
             {
                 Items[item] += 1;
             }
-            Notify();
+            Notify(0);
         }
 
         public void RemoveItem(Item item)
@@ -42,6 +42,7 @@ namespace Labb_1_Marcus_Hellkvist.Models
                     Items.Remove(item);
                 }
             }
+            Notify(1);
         }
 
         public int GetTotalPriceWithDiscount()
@@ -80,11 +81,11 @@ namespace Labb_1_Marcus_Hellkvist.Models
             _observers.Remove(observer);
         }
 
-        public void Notify()
+        public void Notify(int flag)
         {
             foreach (var observer in _observers)
             {
-                observer.Update(this);
+                observer.Update(this, flag);
             }
         }
     }
