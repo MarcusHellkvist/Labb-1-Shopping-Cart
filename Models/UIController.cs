@@ -20,7 +20,7 @@ namespace Labb_1_Marcus_Hellkvist.Models
                         Console.WriteLine(cart.Items.LastOrDefault().Key.Name + " added to the shopping cart");
                         break;
                     case 1:
-                        Console.WriteLine("Item removed");
+                        Console.WriteLine("Item removed from the shopping cart");
                         break;
                     default:
                         break;
