@@ -7,10 +7,11 @@ using System.Threading.Tasks;
 
 namespace Labb_1_Marcus_Hellkvist.Models
 {
-    public class Cart
+    public class Cart : ISubject
     {
         public Dictionary<Item, int> Items = new Dictionary<Item, int>();
         public List<int> Discounts { get; set; } = new List<int>();
+        private readonly List<IObserver> _observers = new List<IObserver>();
 
         public void CalculateDiscount(IDiscount discountMethod)
         {
@@ -28,6 +29,7 @@ namespace Labb_1_Marcus_Hellkvist.Models
             {
                 Items[item] += 1;
             }
+            Notify();
         }
 
         public void RemoveItem(Item item)
@@ -66,6 +68,24 @@ namespace Labb_1_Marcus_Hellkvist.Models
                 discount += d;
             }
             return discount;
+        }
+
+        public void Attach(IObserver observer)
+        {
+            _observers.Add(observer);
+        }
+
+        public void Detach(IObserver observer)
+        {
+            _observers.Remove(observer);
+        }
+
+        public void Notify()
+        {
+            foreach (var observer in _observers)
+            {
+                observer.Update(this);
+            }
         }
     }
 }

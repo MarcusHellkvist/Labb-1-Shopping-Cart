@@ -22,7 +22,10 @@ var discountCheapestItem = new DiscountCheapestItem();
 // credit card
 var masterCard = new MasterCard(400);
 
-cart.AddItem(milk);
+var UIController = new UIController();
+
+cart.Attach(UIController);
+
 cart.AddItem(milk);
 cart.AddItem(milk);
 cart.AddItem(bread);
@@ -35,8 +38,6 @@ cart.AddItem(soda);
 cart.AddItem(soda);
 cart.AddItem(soda);
 cart.AddItem(water);
-
-cart.RemoveItem(milk);
 
 cart.CalculateDiscount(discountThreeForTwo);
 cart.CalculateDiscount(discountCheapestItem);
