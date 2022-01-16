@@ -1,0 +1,15 @@
+C:\Users\Maco\source\repos\Labb 1 Marcus Hellkvist\Labb 1 Marcus Hellkvist\bin\Debug\net6.0\Labb 1 Marcus Hellkvist.exe
+C:\Users\Maco\source\repos\Labb 1 Marcus Hellkvist\Labb 1 Marcus Hellkvist\bin\Debug\net6.0\Labb 1 Marcus Hellkvist.deps.json
+C:\Users\Maco\source\repos\Labb 1 Marcus Hellkvist\Labb 1 Marcus Hellkvist\bin\Debug\net6.0\Labb 1 Marcus Hellkvist.runtimeconfig.json
+C:\Users\Maco\source\repos\Labb 1 Marcus Hellkvist\Labb 1 Marcus Hellkvist\bin\Debug\net6.0\Labb 1 Marcus Hellkvist.dll
+C:\Users\Maco\source\repos\Labb 1 Marcus Hellkvist\Labb 1 Marcus Hellkvist\bin\Debug\net6.0\ref\Labb 1 Marcus Hellkvist.dll
+C:\Users\Maco\source\repos\Labb 1 Marcus Hellkvist\Labb 1 Marcus Hellkvist\bin\Debug\net6.0\Labb 1 Marcus Hellkvist.pdb
+C:\Users\Maco\source\repos\Labb 1 Marcus Hellkvist\Labb 1 Marcus Hellkvist\obj\Debug\net6.0\Labb 1 Marcus Hellkvist.csproj.AssemblyReference.cache
+C:\Users\Maco\source\repos\Labb 1 Marcus Hellkvist\Labb 1 Marcus Hellkvist\obj\Debug\net6.0\Labb 1 Marcus Hellkvist.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Maco\source\repos\Labb 1 Marcus Hellkvist\Labb 1 Marcus Hellkvist\obj\Debug\net6.0\Labb 1 Marcus Hellkvist.AssemblyInfoInputs.cache
+C:\Users\Maco\source\repos\Labb 1 Marcus Hellkvist\Labb 1 Marcus Hellkvist\obj\Debug\net6.0\Labb 1 Marcus Hellkvist.AssemblyInfo.cs
+C:\Users\Maco\source\repos\Labb 1 Marcus Hellkvist\Labb 1 Marcus Hellkvist\obj\Debug\net6.0\Labb 1 Marcus Hellkvist.csproj.CoreCompileInputs.cache
+C:\Users\Maco\source\repos\Labb 1 Marcus Hellkvist\Labb 1 Marcus Hellkvist\obj\Debug\net6.0\Labb 1 Marcus Hellkvist.dll
+C:\Users\Maco\source\repos\Labb 1 Marcus Hellkvist\Labb 1 Marcus Hellkvist\obj\Debug\net6.0\ref\Labb 1 Marcus Hellkvist.dll
+C:\Users\Maco\source\repos\Labb 1 Marcus Hellkvist\Labb 1 Marcus Hellkvist\obj\Debug\net6.0\Labb 1 Marcus Hellkvist.pdb
+C:\Users\Maco\source\repos\Labb 1 Marcus Hellkvist\Labb 1 Marcus Hellkvist\obj\Debug\net6.0\Labb 1 Marcus Hellkvist.genruntimeconfig.cache
